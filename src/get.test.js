@@ -5,7 +5,7 @@ const load = require('load-json-file')
 const get = require('./get')
 
 const out = (filename) => path.join(__dirname, '..', 'test', 'in', filename)
-const services = ['World_Topo_Map', 'World_Imagery']
+const services = ['World_Topo_Map', 'World_Imagery', 'ESRI_Imagery_World_2D']
 
 if (process.env.REGEN) {
   test('get -- services', t => {

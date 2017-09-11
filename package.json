@@ -32,6 +32,7 @@
     "write-json-file": "^2.2.0"
   },
   "dependencies": {
-    "global-mercator": "^2.8.4"
+    "global-mercator": "^2.8.4",
+    "slippy-tile": "^2.3.1"
   }
 }

@@ -24,7 +24,8 @@
 	},
 	"url": {
 		"getCapabilities": "https://services.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer?f=pjson",
-		"slippy": "https://services.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer?bbox={bbox}&bboxSR={srs}&imageSR={srs}&size=256,256&format=png&transparent=true",
+		"slippy": "https://services.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer/export?bbox={bbox4326}&bboxSR=EPSG:4326&imageSR=EPSG:3857&size=256,256&format=png&transparent=true&f=image",
+		"world": "https://services.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer/export?bbox=-180,-85.051129,180,85.051129&bboxSR=EPSG:4326&imageSR=EPSG:3857&size=256,256&format=png&transparent=true&f=image",
 		"host": "services.arcgisonline.com"
 	}
 }

@@ -15,6 +15,7 @@ declare namespace arcgisParser {
   interface URL {
     getCapabilities: string
     slippy: string
+    world: string
     host: string
   }
 

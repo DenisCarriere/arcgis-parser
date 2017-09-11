@@ -1,5 +1,5 @@
 const URL = require('url')
-const get = require('./get')
+const slippyTile = require('slippy-tile')
 const mapZoom = require('./map-zoom')
 const globalMercator = require('global-mercator')
 
@@ -52,6 +52,7 @@ const globalMercator = require('global-mercator')
  * @typedef {Object} URL
  * @property {string} getCapabilities
  * @property {string} slippy
+ * @property {string} world
  * @property {string} host
  */
 
@@ -144,31 +145,52 @@ function parseLayer (url, json) {
  */
 function parseUrl (url, json) {
   const parse = URL.parse(url)
+  const isWGS84 = json.spatialReference && json.spatialReference.wkid === 4326
+
   // getCapabilities
   parse.search = null
   parse.query = {f: 'pjson'}
-  const getCapabilities = URL.format(parse).replace(/%7B/g, '{').replace(/%7D/g, '}')
+  const getCapabilities = clean(URL.format(parse))
 
   // Slippy
   var slippy = null
   if (json.capabilities && json.capabilities.includes('Map')) {
     const formats = json.supportedImageFormatTypes || ''
     const format = (formats.match(/png/i)) ? 'png' : 'jpg'
+
     parse.query = {
-      bbox: '{bbox}',
-      bboxSR: '{srs}',
-      imageSR: '{srs}',
+      bbox: isWGS84 ? '{bbox4326}' : '{bbox3857}',
+      bboxSR: isWGS84 ? 'EPSG:4326' : 'EPSG:3857',
+      imageSR: 'EPSG:3857',
       size: '256,256',
       format: format,
-      transparent: 'true'
+      transparent: 'true',
+      f: 'image'
     }
-    slippy = URL.format(parse).replace(/%7B/g, '{').replace(/%7D/g, '}').replace(/%2C/g, ',')
+    parse.path = null
+    parse.pathname = parse.pathname + '/export'
+    slippy = clean(URL.format(parse))
   }
   return {
     getCapabilities: getCapabilities,
     slippy: slippy,
+    world: slippyTile([0, 0, 0], slippy),
     host: parse.host
   }
+}
+
+/**
+ * Clean URL
+ *
+ * @param {string} url Url
+ * @returns {string} Cleaned URL
+ */
+function clean (url) {
+  return url
+    .replace(/%3A/g, ':')
+    .replace(/%7B/g, '{')
+    .replace(/%7D/g, '}')
+    .replace(/%2C/g, ',')
 }
 
 /**
