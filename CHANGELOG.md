@@ -1,5 +1,5 @@
 # Changelog
 
-## 0.1.0 - 2017-09-11
+## 1.0.0 - 2017-09-11
 
-- Draft for ArcGIS Parser
+- Finalize beta of ArcGIS Parser

@@ -1,0 +1,30 @@
+{
+	"service": {
+		"type": "ArcGIS REST Service",
+		"version": 10.3,
+		"title": "World Imagery"
+	},
+	"layer": {
+		"title": "World Imagery",
+		"identifier": "ESRI_Imagery_World_2D",
+		"author": "ESRI",
+		"abstract": " imagery, satellite, aerial, 500m (World), 15m (World), 15m (Antarctica), 1m (World Cities), 1m (United States), CONUS, IKONOS",
+		"category": "imageryBaseMapsEarthCover (Imagery, basemaps, and land cover)",
+		"keywords": "World,Global,United States,Antarctica 2009",
+		"format": "png",
+		"formats": "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+		"minzoom": 2,
+		"maxzoom": 17,
+		"bbox": [
+			-179.999999,
+			-89.999999,
+			179.999999,
+			89.999999
+		]
+	},
+	"url": {
+		"getCapabilities": "https://services.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer?f=pjson",
+		"slippy": "https://services.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer?bbox={bbox}&bboxSR={srs}&imageSR={srs}&size=256,256&format=png&transparent=true",
+		"host": "services.arcgisonline.com"
+	}
+}

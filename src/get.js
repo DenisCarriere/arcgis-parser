@@ -6,6 +6,9 @@ const format = require('./format')
  *
  * @param {Object|string} url
  * @returns {Promise<Object>} JSON results
+ * @example
+ * get({service: 'ESRI_Imagery_World_2D'})
+ *   .then(capabilities => capabilities)
  */
 module.exports = function get (url) {
   if (!url) throw new Error('url is required')
@@ -13,7 +16,8 @@ module.exports = function get (url) {
 
   return new Promise((resolve, reject) => {
     https.get(url, response => {
-      let data = ''
+      if (!response.headers['content-type'].match(/application\/json/i)) return reject('content-type must be application/json')
+      var data = ''
       response.on('data', chunk => {
         data += chunk
       })

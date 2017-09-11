@@ -1,0 +1,30 @@
+{
+	"service": {
+		"type": "ArcGIS REST Service",
+		"version": 10.3,
+		"title": "National Geographic World Map"
+	},
+	"layer": {
+		"title": "National Geographic World Map",
+		"identifier": "NatGeo_World_Map",
+		"author": null,
+		"abstract": "basemap, water, hydrography, transportation, boundaries, cities, protected areas, land cover, bathymetry, marine water body names",
+		"category": null,
+		"keywords": "World,Global,North America,National Geographic",
+		"format": "png",
+		"formats": "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+		"minzoom": 0,
+		"maxzoom": 16,
+		"bbox": [
+			-179.999999,
+			-85,
+			179.999999,
+			85
+		]
+	},
+	"url": {
+		"getCapabilities": "https://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map/MapServer?f=pjson",
+		"slippy": "https://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map/MapServer?bbox={bbox}&bboxSR={srs}&imageSR={srs}&size=256,256&format=png&transparent=true",
+		"host": "services.arcgisonline.com"
+	}
+}

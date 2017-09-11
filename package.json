@@ -10,7 +10,7 @@
     "src"
   ],
   "scripts": {
-    "test": "tap src/**.test.js --coverage",
+    "test": "tap src/**.test.js test.js --coverage",
     "lint": "standard"
   },
   "author": "Denis Carriere <@DenisCarriere>",
@@ -25,14 +25,13 @@
     "scheme"
   ],
   "devDependencies": {
-    "axios": "^0.16.2",
     "load-json-file": "^3.0.0",
-    "request": "^2.81.0",
     "standard": "^8.6.0",
     "tap": "^10.7.2",
     "tape": "^4.6.3",
-    "whatwg-fetch": "^2.0.3",
     "write-json-file": "^2.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "global-mercator": "^2.8.4"
+  }
 }
