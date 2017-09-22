@@ -17,11 +17,12 @@ module.exports = function get (url) {
   if (typeof url === 'object') url = format(url)
 
   // Support both HTTP & HTTPS
-  var request = (URL.parse(url).protocol === 'https:') ? request = https : request = http;
+  var request = (URL.parse(url).protocol === 'https:') ? request = https : request = http
 
   return new Promise((resolve, reject) => {
     request.get(url, response => {
-      if (!response.headers['content-type'].match(/application\/json/i)) return reject('content-type must be application/json')
+      // if (!response.headers['content-type'].match(/application\/json/i)) return reject('content-type must be application/json')
+
       var data = ''
       response.on('data', chunk => {
         data += chunk
