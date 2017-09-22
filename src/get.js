@@ -1,4 +1,6 @@
 const https = require('https')
+const http = require('http')
+const URL = require('url')
 const format = require('./format')
 
 /**
@@ -14,8 +16,11 @@ module.exports = function get (url) {
   if (!url) throw new Error('url is required')
   if (typeof url === 'object') url = format(url)
 
+  // Support both HTTP & HTTPS
+  var request = (URL.parse(url).protocol === 'https:') ? request = https : request = http;
+
   return new Promise((resolve, reject) => {
-    https.get(url, response => {
+    request.get(url, response => {
       if (!response.headers['content-type'].match(/application\/json/i)) return reject('content-type must be application/json')
       var data = ''
       response.on('data', chunk => {

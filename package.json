@@ -1,6 +1,6 @@
 {
   "name": "arcgis-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parser for ArcGIS REST Services to human friendly JSON.",
   "main": "index.js",
   "types": "index.d.ts",

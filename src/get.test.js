@@ -14,19 +14,30 @@ if (process.env.REGEN) {
         const output = out(service + '.json')
         write.sync(output, capabilities)
         t.deepEqual(capabilities, load.sync(output))
-      })
+      }).catch(error => t.fail(error))
     })
     t.end()
   })
 }
 
-test('get -- string', t => {
+test('get -- https', t => {
   get('https://services.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer?f=pjson').then(capabilities => {
     t.notDeepEqual(capabilities, {})
-  })
+  }).catch(error => t.fail(error))
+  t.end();
+})
+
+test('get -- service', t => {
   get({service: 'ESRI_Imagery_World_2D'}).then(capabilities => {
     t.notDeepEqual(capabilities, {})
-  })
+  }).catch(error => t.fail(error))
+  t.end()
+});
+
+test('get -- http', t => {
+  get('http://services.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer?f=pjson').then(capabilities => {
+    t.notDeepEqual(capabilities, {})
+  }).catch(error => t.fail(error))
   t.end()
 })
 
