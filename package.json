@@ -2,15 +2,19 @@
   "name": "arcgis-parser",
   "version": "1.0.2",
   "description": "Parser for ArcGIS REST Services to human friendly JSON.",
-  "main": "index.js",
+  "main": "arcgis-parser.js",
+  "module": "index.js",
+  "jsnext:main": "index.js",
   "types": "index.d.ts",
   "files": [
     "index.js",
     "index.d.ts",
+    "arcgis-parser.js",
     "src"
   ],
   "scripts": {
-    "test": "tap src/**.test.js test.js --coverage",
+    "pretest": "rollup -f cjs -o arcgis-parser.js index.js",
+    "test": "node -r @std/esm test/**.test.js test.js",
     "lint": "standard"
   },
   "author": "Denis Carriere <@DenisCarriere>",
@@ -25,14 +29,19 @@
     "scheme"
   ],
   "devDependencies": {
-    "load-json-file": "^3.0.0",
-    "standard": "^8.6.0",
-    "tap": "^10.7.2",
-    "tape": "^4.6.3",
-    "write-json-file": "^2.2.0"
+    "@std/esm": "*",
+    "load-json-file": "*",
+    "node-fetch": "*",
+    "standard": "*",
+    "tape": "*",
+    "write-json-file": "*"
   },
   "dependencies": {
-    "global-mercator": "^2.8.4",
-    "slippy-tile": "^2.3.1"
+    "global-mercator": "*",
+    "slippy-tile": "*"
+  },
+  "@std/esm": {
+    "esm": "js",
+    "cjs": true
   }
 }

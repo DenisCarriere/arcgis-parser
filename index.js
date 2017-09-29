@@ -1,24 +1,27 @@
-const get = require('./src/get')
-const format = require('./src/format')
-const metadata = require('./src/metadata')
+import parseService from './src/parse-service'
+import parseLayer from './src/parse-layer'
+import parseUrl from './src/parse-url'
 
 /**
- * Get Metadata from ArcGIS REST Service
+ * ArcGIS Parser
  *
- * @param {string|Object} options Options
- * @param {string} [options.url] Url
- * @param {Protocol} [options.protocol='https'] Protocol
- * @param {string} [options.host='services.arcgisonline.com'] Host
- * @param {string} [options.pathname='/arcgis/rest/services/{service}/MapServer'] Pathname
- * @param {Object} [options.query={f: 'pjson'}] Query
- * @param {string} [options.service] ArcGIS Service Name
- * @returns {Promise<Metadata>} Metadata
+ * @param {Object} json MapServer or ImageServer JSON
+ * @param {string} url ArcGIS REST service url
+ * @returns {Metadata} Metadata
  * @example
- * const metadata = await arcgisParser({service: 'World_Imagery'})
+ * const url = 'https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer?f=pjson'
+ * const response = await fetch(url)
+ * const json = await response.json()
+ * const metadata = arcgisParser(url, json)
+ * //=metadata
  */
-module.exports = function (options) {
-  const url = format(options)
-  return get(url)
-    .then(json => metadata(url, json))
-    .catch(error => { throw new Error(error) })
+export default function arcgisParser (url, json) {
+  if (!url) throw new Error('url is required')
+  if (!json) throw new Error('json is required')
+
+  return {
+    service: parseService(json),
+    layer: parseLayer(url, json),
+    url: parseUrl(url, json)
+  }
 }

@@ -29,15 +29,11 @@ $ npm install --save arcgis-parser
 ## Quickstart
 
 ```javascript
-const fs = require('fs')
-const xml = fs.readFileSync('ogc-wmts.xml', 'utf8')
-const capabilities = ogcParser.wmts(xml)
-capabilities.service.type
-//=OGC WMTS
-capabilities.service.version
-//=1.0.0
-capabilities.url.getCapabilities
-//=http://localhost:80/WMTS/1.0.0/WMTSCapabilities.xml
+const url = 'https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer?f=pjson'
+const response = await fetch(url)
+const json = await response.json()
+const metadata = arcgisParser(url, json)
+//=metadata
 ```
 
 **MapServer?f=pjson**

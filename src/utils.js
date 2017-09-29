@@ -1,10 +1,24 @@
 /**
+ * Clean URL
+ *
+ * @param {string} url Url
+ * @returns {string} Cleaned URL
+ */
+export function clean (url) {
+  return url
+    .replace(/%3A/g, ':')
+    .replace(/%7B/g, '{')
+    .replace(/%7D/g, '}')
+    .replace(/%2C/g, ',')
+}
+
+/**
  * Map Zoom
  *
  * @param {number} scale
  * @returns {number} zoom level
  */
-module.exports = function mapZoom (scale) {
+export function mapZoom (scale) {
   if (scale === null || scale === undefined) throw new Error('scale is required')
   if (typeof scale !== 'number') throw new Error('scale should be a number')
 
