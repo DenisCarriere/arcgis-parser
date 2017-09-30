@@ -5,8 +5,8 @@ import parseUrl from './src/parse-url'
 /**
  * ArcGIS Parser
  *
- * @param {Object} json MapServer or ImageServer JSON
  * @param {string} url ArcGIS REST service url
+ * @param {Object} json MapServer or ImageServer JSON
  * @returns {Metadata} Metadata
  * @example
  * const url = 'https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer?f=pjson'

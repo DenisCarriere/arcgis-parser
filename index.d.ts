@@ -1,61 +1,42 @@
-declare function arcgisParser(url: arcgisParser.Options | string): Promise<arcgisParser.Metadata>
-declare namespace arcgisParser {
-  type BBox = [number, number, number, number]
-  type Protocol = 'http' | 'https'
+export type BBox = [number, number, number, number]
+export type Protocol = 'http' | 'https'
 
-  interface Options {
-    url?: string
-    protocol?: Protocol
-    host?: string
-    pathname?: string
-    service?: string
-    query?: {[key: string]: any}
-  }
-
-  interface URL {
-    getCapabilities: string
-    slippy: string
-    world: string
-    host: string
-  }
-
-  interface Service {
-    type: string
-    version: string
-    title: string
-  }
-
-  interface Layer {
-    title: string
-    identifier: string
-    author: string
-    abstract: string
-    category: string
-    keywords: string
-    format: string
-    formats: string
-    minzoom: number
-    maxzoom: number
-    bbox: BBox
-  }
-
-  interface Metadata {
-    service: Service
-    layer: Layer
-    url: URL
-  }
-  /**
-   * Metadata
-   */
-  export function metadata(url: Options | string, json: any): Metadata
-  /**
-   * Format
-   */
-  export function format(options: Options): string
-
-  /**
-   * Get
-   */
-  export function get(url: Options | string): Promise<any>
+export interface URL {
+  getCapabilities: string
+  slippy: string
+  world: string
+  host: string
 }
-export = arcgisParser
+
+export interface Service {
+  type: string
+  version: string
+  title: string
+}
+
+export interface Layer {
+  title: string
+  identifier: string
+  author: string
+  abstract: string
+  category: string
+  keywords: string
+  format: string
+  formats: string
+  minzoom: number
+  maxzoom: number
+  bbox: BBox
+}
+
+export interface Metadata {
+  service: Service
+  layer: Layer
+  url: URL
+}
+/**
+ * ArcGIS Parser
+ *
+ * @param url ArcGIS REST service url
+ * @param json MapServer or ImageServer JSON
+ */
+export default function arcgisParser(url: string, json: object): Metadata
