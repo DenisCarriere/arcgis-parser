@@ -1,7 +1,8 @@
 # Changelog
 
-## 2.0.0 - 2017-09-29
+## 2.0.0 - 2017-09-30
 
+- Support ESRI Image Service
 - Support ES modules
 
 ## 1.0.1 - 2017-09-22

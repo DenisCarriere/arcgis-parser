@@ -8,7 +8,8 @@
 		"title": "World Topographic Map",
 		"identifier": "World_Topo_Map",
 		"author": "Esri",
-		"abstract": "topographic, topography, administrative boundaries, cities, water features, physiographic features, parks, landmarks, highways, roads, railways, airports, land cover, shaded relief imagery",
+		"abstract": "This map is designed to be used as a basemap by GIS professionals and as a reference map by anyone. The map includes administrative boundaries, cities, water features, physiographic features, parks, landmarks, highways, roads, railways, and airports overlaid on land cover and shaded relief imagery for added context. The map provides coverage for the world down to a scale of ~1:72k. Coverage is provided down to ~1:4k for the following areas: Australia and New Zealand; India; Europe; Canada; Mexico; the continental United States and Hawaii; South America and Central America; Africa; and most of the Middle East. Coverage down to ~1:1k and ~1:2k is available in select urban areas. This basemap was compiled from a variety of best available sources from several data providers, including the U.S. Geological Survey (USGS), U.S. Environmental Protection Agency (EPA), U.S. National Park Service (NPS), Food and Agriculture Organization of the United Nations (FAO), Department of Natural Resources Canada (NRCAN), GeoBase, Agriculture and Agri-Food Canada, DeLorme, HERE, Esri, OpenStreetMap contributors, and the GIS User Community. For more information on this map, including our terms of use, visit us online at http://goto.arcgisonline.com/maps/World_Topo_Map",
+		"attribution": "Sources: Esri, HERE, DeLorme, Intermap, increment P Corp., GEBCO, USGS, FAO, NPS, NRCAN, GeoBase, IGN, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), swisstopo, MapmyIndia, © OpenStreetMap contributors, and the GIS User Community",
 		"category": "imageryBaseMapsEarthCover (Imagery, basemaps, and land cover)",
 		"keywords": "World,Global,Europe,North America,South America,Southern Africa,Australia,New Zealand,India",
 		"format": "png",
@@ -24,8 +25,8 @@
 	},
 	"url": {
 		"getCapabilities": "https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer?f=pjson",
-		"slippy": "https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/export?bbox={bbox3857}&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&format=png&transparent=true&f=image",
-		"world": "https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/export?bbox=-20037508.3,-19971868.9,20037508.3,19971868.9&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&format=png&transparent=true&f=image",
+		"slippy": "https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/export?bbox={bbox3857}&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&format=png&transparent=true&noData=0&f=image",
+		"world": "https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/export?bbox=-20037508.3,-19971868.9,20037508.3,19971868.9&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&format=png&transparent=true&noData=0&f=image",
 		"host": "services.arcgisonline.com"
 	}
 }

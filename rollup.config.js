@@ -2,7 +2,7 @@ export default {
   input: 'index.js',
   output: {
     extend: true,
-    file: 'arcgis-parser.js',
+    file: 'main.js',
     format: 'cjs'
   }
 }

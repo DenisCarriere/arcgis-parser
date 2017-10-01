@@ -2,19 +2,19 @@
   "name": "arcgis-parser",
   "version": "2.0.0",
   "description": "Parser for ArcGIS REST Services to human friendly JSON.",
-  "main": "arcgis-parser.js",
+  "main": "main.js",
   "module": "index.js",
   "jsnext:main": "index.js",
   "types": "index.d.ts",
   "files": [
     "index.js",
     "index.d.ts",
-    "arcgis-parser.js",
+    "main.js",
     "src"
   ],
   "scripts": {
-    "pretest": "rollup -c rollup.config.js",
-    "test": "node -r @std/esm test/**.test.js",
+    "prepublish": "rollup -c rollup.config.js",
+    "test": "node -r @std/esm test.js",
     "posttest": "standard src/**.js"
   },
   "author": "Denis Carriere <@DenisCarriere>",
@@ -30,9 +30,12 @@
   ],
   "devDependencies": {
     "@std/esm": "*",
+    "glob": "*",
+    "load-json-file": "*",
     "node-fetch": "*",
     "standard": "*",
-    "tape": "*"
+    "tape": "*",
+    "write-json-file": "*"
   },
   "dependencies": {
     "global-mercator": "*",

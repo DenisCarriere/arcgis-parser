@@ -2,6 +2,22 @@ import { metersToLngLat } from 'global-mercator'
 import { mapZoom } from './utils'
 
 /**
+ * @typedef {Object} Layer
+ * @property {string} title
+ * @property {string} identifier
+ * @property {string} author
+ * @property {string} abstract
+ * @property {string} attribution
+ * @property {string} category
+ * @property {string} keywords
+ * @property {string} format
+ * @property {string} formats
+ * @property {number} minzoom
+ * @property {number} maxzoom
+ * @property {Array<number>} bbox
+ */
+
+/**
  * Parse Layer
  *
  * @param {string} url
@@ -16,11 +32,10 @@ export default function parseLayer (url, json) {
   if (identifierMatch.length > 0) identifier = identifierMatch[1]
 
   // Formats
-  const formats = json.supportedImageFormatTypes
-  var format
+  var format = 'jpg'
+  const formats = json.supportedImageFormatTypes || ''
   if (formats.match(/png/i)) format = 'png'
   else if (formats.match(/jpg/i)) format = 'jpg'
-  else format = null
 
   // BBox
   var bbox = null
@@ -52,7 +67,8 @@ export default function parseLayer (url, json) {
     title: title,
     identifier: identifier,
     author: documentInfo.Author || null,
-    abstract: documentInfo.Subject || null,
+    abstract: json.description || json.serviceDescription || null,
+    attribution: json.copyrightText || null,
     category: documentInfo.Category || null,
     keywords: documentInfo.Keywords || null,
     format: format,

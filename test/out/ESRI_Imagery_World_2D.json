@@ -8,7 +8,8 @@
 		"title": "World Imagery",
 		"identifier": "ESRI_Imagery_World_2D",
 		"author": "ESRI",
-		"abstract": " imagery, satellite, aerial, 500m (World), 15m (World), 15m (Antarctica), 1m (World Cities), 1m (United States), CONUS, IKONOS",
+		"abstract": "This map presents low-resolution imagery for the world and high-resolution imagery for the United States and other metropolitan areas around the world. The map includes NASA Blue Marble: Next Generation 500m resolution imagery at small scales (above 1:1,000,000), i-cubed 15m eSAT imagery at medium-to-large scales (down to 1:70,000) for the world, and USGS 15m Landsat imagery for Antarctica.  It also includes 1m i-cubed Nationwide Select imagery for the continental United States, and GeoEye IKONOS 1m resolution imagery for Hawaii, parts of Alaska, and several hundred metropolitan areas around the world. For more information on this map, including our terms of use, visit us online at http://goto.arcgisonline.com/maps/ESRI_Imagery_World_2D",
+		"attribution": "Copyright:© 2013 ESRI, i-cubed, GeoEye",
 		"category": "imageryBaseMapsEarthCover (Imagery, basemaps, and land cover)",
 		"keywords": "World,Global,United States,Antarctica 2009",
 		"format": "png",
@@ -24,8 +25,8 @@
 	},
 	"url": {
 		"getCapabilities": "https://services.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer?f=pjson",
-		"slippy": "https://services.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer/export?bbox={bbox4326}&bboxSR=EPSG:4326&imageSR=EPSG:3857&size=256,256&format=png&transparent=true&f=image",
-		"world": "https://services.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer/export?bbox=-180,-85.051129,180,85.051129&bboxSR=EPSG:4326&imageSR=EPSG:3857&size=256,256&format=png&transparent=true&f=image",
+		"slippy": "https://services.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer/export?bbox={bbox4326}&bboxSR=EPSG:4326&imageSR=EPSG:3857&size=256,256&format=png&transparent=true&noData=0&f=image",
+		"world": "https://services.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer/export?bbox=-180,-85.051129,180,85.051129&bboxSR=EPSG:4326&imageSR=EPSG:3857&size=256,256&format=png&transparent=true&noData=0&f=image",
 		"host": "services.arcgisonline.com"
 	}
 }

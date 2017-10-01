@@ -8,7 +8,8 @@
 		"title": "National Geographic World Map",
 		"identifier": "NatGeo_World_Map",
 		"author": null,
-		"abstract": "basemap, water, hydrography, transportation, boundaries, cities, protected areas, land cover, bathymetry, marine water body names",
+		"abstract": "This map is designed to be used as a general reference map for informational and educational purposes as well as a base map by GIS professionals and other users for creating web maps and web mapping applications. The map was developed by National Geographic and Esri and reflects the distinctive National Geographic cartographic style in a multi-scale reference map of the world. The map was authored using data from a variety of leading data providers, including DeLorme, HERE, UNEP-WCMC, NASA, ESA, USGS, and others. This reference map includes administrative boundaries, cities, protected areas, highways, roads, railways, water features, buildings and landmarks, overlaid on shaded relief and land cover imagery for added context. The map currently includes global coverage down to ~1:144k scale and more detailed coverage for North America down to ~1:9k scale. For more information on this map, including our terms of use, visit us online at http://goto.arcgisonline.com/maps/NatGeo_World_Map",
+		"attribution": "Content may not reflect National Geographic's current map policy. Sources: National Geographic, Esri, DeLorme, HERE, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, increment P Corp.",
 		"category": null,
 		"keywords": "World,Global,North America,National Geographic",
 		"format": "png",
@@ -24,8 +25,8 @@
 	},
 	"url": {
 		"getCapabilities": "https://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map/MapServer?f=pjson",
-		"slippy": "https://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map/MapServer/export?bbox={bbox3857}&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&format=png&transparent=true&f=image",
-		"world": "https://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map/MapServer/export?bbox=-20037508.3,-19971868.9,20037508.3,19971868.9&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&format=png&transparent=true&f=image",
+		"slippy": "https://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map/MapServer/export?bbox={bbox3857}&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&format=png&transparent=true&noData=0&f=image",
+		"world": "https://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map/MapServer/export?bbox=-20037508.3,-19971868.9,20037508.3,19971868.9&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&format=png&transparent=true&noData=0&f=image",
 		"host": "services.arcgisonline.com"
 	}
 }

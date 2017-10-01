@@ -1,0 +1,467 @@
+{
+  "currentVersion": 10.41,
+  "serviceDescription": "This image service contains an IKONOS scene for the Toronto city, Ontario, Canada. This service provides dynamic access to the on-the-fly pansharpened 1-meter resolution satellite imagery, as well as access to the pre-generated natural color cache tiles. The service also supports height mensuration. The service has four bands: blue, green, red, and near-infrared. Source: GeoEye Inc. Esri reserves the right to change or remove this service at any time and without notice.",
+  "name": "Toronto",
+  "description": "This image service contains an IKONOS scene for the Toronto city, Ontario, Canada. This service provides dynamic access to the on-the-fly pansharpened 1-meter resolution satellite imagery, as well as access to the pre-generated natural color cache tiles. The service also supports height mensuration. The service has four bands: blue, green, red, and near-infrared. Source: GeoEye Inc. Esri reserves the right to change or remove this service at any time and without notice.",
+  "extent": {
+   "xmin": -8844874.0651,
+   "ymin": 5401062.402699997,
+   "xmax": -8828990.0651,
+   "ymax": 5420947.402699997,
+   "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+   }
+  },
+  "initialExtent": {
+   "xmin": -8844874.0651,
+   "ymin": 5401062.402699997,
+   "xmax": -8828990.0651,
+   "ymax": 5420947.402699997,
+   "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+   }
+  },
+  "fullExtent": {
+   "xmin": -8844874.0651,
+   "ymin": 5401062.402699997,
+   "xmax": -8828990.0651,
+   "ymax": 5420947.402699997,
+   "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+   }
+  },
+  "pixelSizeX": 1,
+  "pixelSizeY": 1,
+  "bandCount": 4,
+  "pixelType": "U16",
+  "minPixelSize": 0.5971642835598172,
+  "maxPixelSize": 305.74811314055756,
+  "copyrightText": "Copyright © 2012 GeoEye Inc.",
+  "serviceDataType": "esriImageServiceDataTypeGeneric",
+  "minValues": [
+   195,
+   168,
+   1,
+   1
+  ],
+  "maxValues": [
+   2047,
+   2047,
+   2047,
+   2047
+  ],
+  "meanValues": [
+   407.6350849285231,
+   424.3829909000868,
+   306.3585015423408,
+   451.4521619746197
+  ],
+  "stdvValues": [
+   103.3454476143749,
+   161.37726805365864,
+   177.16151769901987,
+   330.19574780626806
+  ],
+  "objectIdField": "OBJECTID",
+  "fields": [
+   {
+    "name": "OBJECTID",
+    "type": "esriFieldTypeOID",
+    "alias": "OBJECTID",
+    "domain": null
+   },
+   {
+    "name": "Shape",
+    "type": "esriFieldTypeGeometry",
+    "alias": "Shape",
+    "domain": null
+   },
+   {
+    "name": "Name",
+    "type": "esriFieldTypeString",
+    "alias": "Name",
+    "domain": null,
+    "length": 50
+   },
+   {
+    "name": "MinPS",
+    "type": "esriFieldTypeDouble",
+    "alias": "MinPS",
+    "domain": null
+   },
+   {
+    "name": "MaxPS",
+    "type": "esriFieldTypeDouble",
+    "alias": "MaxPS",
+    "domain": null
+   },
+   {
+    "name": "LowPS",
+    "type": "esriFieldTypeDouble",
+    "alias": "LowPS",
+    "domain": null
+   },
+   {
+    "name": "HighPS",
+    "type": "esriFieldTypeDouble",
+    "alias": "HighPS",
+    "domain": null
+   },
+   {
+    "name": "Category",
+    "type": "esriFieldTypeInteger",
+    "alias": "Category",
+    "domain": {
+     "type": "codedValue",
+     "name": "MosaicCatalogItemCategoryDomain",
+     "codedValues": [
+      {
+       "name": "Unknown",
+       "code": 0
+      },
+      {
+       "name": "Primary",
+       "code": 1
+      },
+      {
+       "name": "Overview",
+       "code": 2
+      },
+      {
+       "name": "Unprocessed Overview",
+       "code": 3
+      },
+      {
+       "name": "Partial Overview",
+       "code": 4
+      },
+      {
+       "name": "Uploaded",
+       "code": 253
+      },
+      {
+       "name": "Incomplete",
+       "code": 254
+      },
+      {
+       "name": "Custom",
+       "code": 255
+      }
+     ]
+    }
+   },
+   {
+    "name": "Tag",
+    "type": "esriFieldTypeString",
+    "alias": "Tag",
+    "domain": null,
+    "length": 20
+   },
+   {
+    "name": "GroupName",
+    "type": "esriFieldTypeString",
+    "alias": "GroupName",
+    "domain": null,
+    "length": 50
+   },
+   {
+    "name": "ProductName",
+    "type": "esriFieldTypeString",
+    "alias": "ProductName",
+    "domain": null,
+    "length": 50
+   },
+   {
+    "name": "CenterX",
+    "type": "esriFieldTypeDouble",
+    "alias": "CenterX",
+    "domain": null
+   },
+   {
+    "name": "CenterY",
+    "type": "esriFieldTypeDouble",
+    "alias": "CenterY",
+    "domain": null
+   },
+   {
+    "name": "ZOrder",
+    "type": "esriFieldTypeInteger",
+    "alias": "ZOrder",
+    "domain": null
+   },
+   {
+    "name": "Shape_Length",
+    "type": "esriFieldTypeDouble",
+    "alias": "Shape_Length",
+    "domain": null
+   },
+   {
+    "name": "Shape_Area",
+    "type": "esriFieldTypeDouble",
+    "alias": "Shape_Area",
+    "domain": null
+   },
+   {
+    "name": "StereoID",
+    "type": "esriFieldTypeString",
+    "alias": "StereoID",
+    "domain": null,
+    "length": 50
+   },
+   {
+    "name": "BlockName",
+    "type": "esriFieldTypeString",
+    "alias": "Block Name",
+    "domain": null,
+    "length": 50
+   },
+   {
+    "name": "SensorName",
+    "type": "esriFieldTypeString",
+    "alias": "Sensor Name",
+    "domain": null,
+    "length": 20
+   },
+   {
+    "name": "AcquisitionDate",
+    "type": "esriFieldTypeDate",
+    "alias": "Acquisition Date",
+    "domain": null,
+    "length": 8
+   },
+   {
+    "name": "SunAzimuth",
+    "type": "esriFieldTypeDouble",
+    "alias": "Sun Azimuth",
+    "domain": null
+   },
+   {
+    "name": "SunElevation",
+    "type": "esriFieldTypeDouble",
+    "alias": "Sun Elevation",
+    "domain": null
+   },
+   {
+    "name": "SatAzimuth",
+    "type": "esriFieldTypeDouble",
+    "alias": "Satellite Azimuth",
+    "domain": null
+   },
+   {
+    "name": "SatElevation",
+    "type": "esriFieldTypeDouble",
+    "alias": "Satellite Elevation",
+    "domain": null
+   },
+   {
+    "name": "CloudCover",
+    "type": "esriFieldTypeDouble",
+    "alias": "Cloud Cover",
+    "domain": null
+   },
+   {
+    "name": "SrcImgID",
+    "type": "esriFieldTypeString",
+    "alias": "SrcImgID",
+    "domain": null,
+    "length": 50
+   },
+   {
+    "name": "OffNadir",
+    "type": "esriFieldTypeDouble",
+    "alias": "OffNadir",
+    "domain": null
+   }
+  ],
+  "capabilities": "Image,Metadata,Catalog,Mensuration",
+  "defaultMosaicMethod": "Northwest",
+  "allowedMosaicMethods": "NorthWest,Center,LockRaster,ByAttribute,Nadir,Viewpoint,Seamline,None",
+  "sortField": "",
+  "sortValue": null,
+  "mosaicOperator": "First",
+  "defaultCompressionQuality": 75,
+  "defaultResamplingMethod": "Bilinear",
+  "maxImageHeight": 4100,
+  "maxImageWidth": 15000,
+  "maxRecordCount": 1000,
+  "maxDownloadImageCount": 20,
+  "maxDownloadSizeLimit": 2048,
+  "maxMosaicImageCount": 20,
+  "singleFusedMapCache": true,
+  "tileInfo": {
+   "rows": 256,
+   "cols": 256,
+   "dpi": 96,
+   "format": "Mixed",
+   "compressionQuality": 75,
+   "origin": {
+    "x": -2.0037508342787E7,
+    "y": 2.0037508342787E7
+   },
+   "spatialReference": {
+    "wkid": 102100,
+    "latestWkid": 3857
+   },
+   "lods": [
+    {
+     "level": 0,
+     "resolution": 156543.03392800014,
+     "scale": 5.91657527591555E8
+    },
+    {
+     "level": 1,
+     "resolution": 78271.51696399994,
+     "scale": 2.95828763795777E8
+    },
+    {
+     "level": 2,
+     "resolution": 39135.75848200009,
+     "scale": 1.47914381897889E8
+    },
+    {
+     "level": 3,
+     "resolution": 19567.87924099992,
+     "scale": 7.3957190948944E7
+    },
+    {
+     "level": 4,
+     "resolution": 9783.93962049996,
+     "scale": 3.6978595474472E7
+    },
+    {
+     "level": 5,
+     "resolution": 4891.96981024998,
+     "scale": 1.8489297737236E7
+    },
+    {
+     "level": 6,
+     "resolution": 2445.98490512499,
+     "scale": 9244648.868618
+    },
+    {
+     "level": 7,
+     "resolution": 1222.992452562495,
+     "scale": 4622324.434309
+    },
+    {
+     "level": 8,
+     "resolution": 611.4962262813797,
+     "scale": 2311162.217155
+    },
+    {
+     "level": 9,
+     "resolution": 305.74811314055756,
+     "scale": 1155581.108577
+    },
+    {
+     "level": 10,
+     "resolution": 152.87405657041106,
+     "scale": 577790.554289
+    },
+    {
+     "level": 11,
+     "resolution": 76.43702828507324,
+     "scale": 288895.277144
+    },
+    {
+     "level": 12,
+     "resolution": 38.21851414253662,
+     "scale": 144447.638572
+    },
+    {
+     "level": 13,
+     "resolution": 19.10925707126831,
+     "scale": 72223.819286
+    },
+    {
+     "level": 14,
+     "resolution": 9.554628535634155,
+     "scale": 36111.909643
+    },
+    {
+     "level": 15,
+     "resolution": 4.77731426794937,
+     "scale": 18055.954822
+    },
+    {
+     "level": 16,
+     "resolution": 2.388657133974685,
+     "scale": 9027.977411
+    },
+    {
+     "level": 17,
+     "resolution": 1.1943285668550503,
+     "scale": 4513.988705
+    },
+    {
+     "level": 18,
+     "resolution": 0.5971642835598172,
+     "scale": 2256.994353
+    },
+    {
+     "level": 19,
+     "resolution": 0.29858214164761665,
+     "scale": 1128.497176
+    }
+   ]
+  },
+  "cacheType": "Map",
+  "allowRasterFunction": true,
+  "rasterFunctionInfos": [
+   {
+    "name": "None",
+    "description": "A No-Op Function.",
+    "help": ""
+   },
+   {
+    "name": "TorontoFalseColor",
+    "description": "This function uses the NIR, Red, Green bands to composite a false color image.",
+    "help": "Applies an extract band function and a percent clip stretch (MinPercent: 0.25, MaxPercent 0.55)."
+   },
+   {
+    "name": "TorontoTrueColor",
+    "description": "This function uses the NIR, Red, Green bands to composite a false color image.",
+    "help": "Applies an extract band function and percent clip stretch (MinPercent: 0.25, MaxPercent 0.55)."
+   },
+   {
+    "name": "TorontoStretch",
+    "description": "A raster function template.",
+    "help": "Applies a percent clip stretch (MinPercent: 0.25, MaxPercent 0.55)."
+   }
+  ],
+  "rasterTypeInfos": [
+   {
+    "name": "Raster Dataset",
+    "description": "Supports all ArcGIS Raster Datasets",
+    "help": ""
+   }
+  ],
+  "mensurationCapabilities": "Basic,Base-Top Height,Top-Top Shadow Height,Base-Top Shadow Height",
+  "hasHistograms": true,
+  "hasColormap": false,
+  "hasRasterAttributeTable": false,
+  "minScale": 1155581.108577,
+  "maxScale": 2256.994353,
+  "exportTilesAllowed": false,
+  "hasMultidimensions": false,
+  "supportsStatistics": true,
+  "supportsAdvancedQueries": true,
+  "editFieldsInfo": null,
+  "ownershipBasedAccessControlForRasters": null,
+  "allowComputeTiePoints": false,
+  "useStandardizedQueries": true,
+  "advancedQueryCapabilities": {
+   "useStandardizedQueries": true,
+   "supportsStatistics": true,
+   "supportsOrderBy": true,
+   "supportsDistinct": true,
+   "supportsPagination": true
+  },
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857
+  }
+ }

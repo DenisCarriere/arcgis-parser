@@ -19,6 +19,7 @@ export interface Layer {
   identifier: string
   author: string
   abstract: string
+  attribution: string
   category: string
   keywords: string
   format: string
@@ -33,8 +34,9 @@ export interface Metadata {
   layer: Layer
   url: URL
 }
+
 /**
- * ArcGIS Parser
+ * Parser for ArcGIS REST Services to human friendly JSON.
  *
  * @param url ArcGIS REST service url
  * @param json MapServer or ImageServer JSON
