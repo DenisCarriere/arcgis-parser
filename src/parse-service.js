@@ -1,4 +1,11 @@
 /**
+ * @typedef {Object} Service
+ * @property {string} type
+ * @property {string} version
+ * @property {string} title
+ */
+
+/**
  * Parse Service
  *
  * @param {Object} json

@@ -1,5 +1,5 @@
 import * as URL from 'url'
-import slippyTile from 'slippy-tile'
+import parseLayer from './parse-layer'
 import { clean } from './utils'
 
 /**
@@ -11,7 +11,6 @@ import { clean } from './utils'
  */
 export default function parseUrl (url, json) {
   const parse = URL.parse(url)
-  const isWGS84 = json.spatialReference && json.spatialReference.wkid === 4326
 
   // getCapabilities
   parse.search = null
@@ -27,9 +26,9 @@ export default function parseUrl (url, json) {
     const format = (formats.match(/png/i)) ? 'png' : 'jpg'
 
     parse.query = {
-      bbox: isWGS84 ? '{bbox4326}' : '{bbox3857}',
-      bboxSR: isWGS84 ? 'EPSG:4326' : 'EPSG:3857',
-      imageSR: 'EPSG:3857',
+      bbox: '{bbox4326}',
+      bboxSR: '4326',
+      imageSR: '3857',
       size: '256,256',
       format: format,
       transparent: 'true',
@@ -46,9 +45,9 @@ export default function parseUrl (url, json) {
     const format = (formats.match(/png/i)) ? 'png' : 'jpg'
 
     parse.query = {
-      bbox: isWGS84 ? '{bbox4326}' : '{bbox3857}',
-      bboxSR: isWGS84 ? 'EPSG:4326' : 'EPSG:3857',
-      imageSR: 'EPSG:3857',
+      bbox: '{bbox4326}',
+      bboxSR: '4326',
+      imageSR: '3857',
       size: '256,256',
       format: format,
       transparent: 'true',
@@ -60,7 +59,13 @@ export default function parseUrl (url, json) {
     slippy = clean(URL.format(parse))
   }
   var world = null
-  if (slippy) world = slippyTile([0, 0, 0], slippy)
+  if (slippy) {
+    let bbox = parseLayer(url, json).bbox
+    // EPSG:3857 doesn't support latitudes higher than 85 degrees
+    if (bbox[1] < -85) bbox[1] = -85
+    if (bbox[3] > 85) bbox[3] = 85
+    world = slippy.replace(/{bbox4326}/, bbox.join(','))
+  }
   return {
     getCapabilities: getCapabilities,
     slippy: slippy,

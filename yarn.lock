@@ -567,8 +567,8 @@ glob@*, glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@~7.1.2:
     path-is-absolute "^1.0.0"
 
 global-mercator@*:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/global-mercator/-/global-mercator-3.0.0.tgz#b531c638724b0957f14a22d4f2335e5d76e583e6"
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/global-mercator/-/global-mercator-3.0.2.tgz#79598252339d9f9187554a743fc1f5c60d403e20"
 
 globals@^9.14.0:
   version "9.18.0"

@@ -25,8 +25,8 @@
 	},
 	"url": {
 		"getCapabilities": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/Toronto/ImageServer?f=pjson",
-		"slippy": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/Toronto/ImageServer/exportImage?bbox={bbox3857}&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&format=jpg&transparent=true&noData=0&f=image",
-		"world": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/Toronto/ImageServer/exportImage?bbox=-20037508.3,-19971868.9,20037508.3,19971868.9&bboxSR=EPSG:3857&imageSR=EPSG:3857&size=256,256&format=jpg&transparent=true&noData=0&f=image",
+		"slippy": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/Toronto/ImageServer/exportImage?bbox={bbox4326}&bboxSR=4326&imageSR=3857&size=256,256&format=jpg&transparent=true&noData=0&f=image",
+		"world": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/Toronto/ImageServer/exportImage?bbox=-79.454856,43.582524,-79.312167,43.711781&bboxSR=4326&imageSR=3857&size=256,256&format=jpg&transparent=true&noData=0&f=image",
 		"host": "sampleserver6.arcgisonline.com"
 	}
 }

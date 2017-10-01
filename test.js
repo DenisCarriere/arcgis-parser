@@ -9,6 +9,7 @@ import { mapZoom } from './src/utils'
 import arcgisParser from './'
 
 const urls = {
+  'SampleWorldCities': 'https://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer',
   'Toronto': 'https://sampleserver6.arcgisonline.com/arcgis/rest/services/Toronto/ImageServer',
   'ESRI_Imagery_World_2D': 'https://services.arcgisonline.com/arcgis/rest/services/ESRI_Imagery_World_2D/MapServer',
   'NatGeo_World_Map': 'https://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map/MapServer',

@@ -60,9 +60,11 @@ export default function parseLayer (url, json) {
   var minzoom
   var maxzoom
   if (json.minScale && json.maxScale) {
-    minzoom = mapZoom(json.minScale)
-    maxzoom = mapZoom(json.maxScale)
+    minzoom = (json.minScale !== 0) ? mapZoom(json.minScale) : 0
+    maxzoom = (json.maxScale !== 0) ? mapZoom(json.maxScale) : 18
   }
+  minzoom = minzoom || 0
+  maxzoom = maxzoom || 18
   return {
     title: title,
     identifier: identifier,

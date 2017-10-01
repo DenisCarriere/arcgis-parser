@@ -1,6 +1,6 @@
 {
   "name": "arcgis-parser",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Parser for ArcGIS REST Services to human friendly JSON.",
   "main": "main.js",
   "module": "index.js",
@@ -13,7 +13,7 @@
     "src"
   ],
   "scripts": {
-    "prepublish": "rollup -c rollup.config.js && echo 'module.exports.default = arcgisParser;' >> main.js",
+    "pretest": "rollup -c rollup.config.js && echo 'module.exports.default = arcgisParser;' >> main.js",
     "test": "node -r @std/esm test.js",
     "posttest": "standard src/**.js"
   },

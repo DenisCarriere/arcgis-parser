@@ -1,0 +1,32 @@
+{
+	"service": {
+		"type": "ArcGIS REST Service",
+		"version": 10.41,
+		"title": "World Cities"
+	},
+	"layer": {
+		"title": "World Cities",
+		"identifier": "SampleWorldCities",
+		"author": "ESRI",
+		"abstract": "The SampleWorldCities service is provided so you can quickly and easily preview the functionality of the GIS server. Click the thumbnail image to open in a web application. This sample service is optional and can be deleted.",
+		"attribution": null,
+		"category": null,
+		"keywords": "sample,map,service",
+		"format": "png",
+		"formats": "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+		"minzoom": 0,
+		"maxzoom": 18,
+		"bbox": [
+			-180,
+			-90,
+			180.0001220703125,
+			90.0001220703125
+		]
+	},
+	"url": {
+		"getCapabilities": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer?f=pjson",
+		"slippy": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer/export?bbox={bbox4326}&bboxSR=4326&imageSR=3857&size=256,256&format=png&transparent=true&noData=0&f=image",
+		"world": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer/export?bbox=-180,-85,180.0001220703125,85&bboxSR=4326&imageSR=3857&size=256,256&format=png&transparent=true&noData=0&f=image",
+		"host": "sampleserver6.arcgisonline.com"
+	}
+}

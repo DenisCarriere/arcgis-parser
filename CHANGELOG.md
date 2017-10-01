@@ -2,6 +2,7 @@
 
 ## 2.0.0 - 2017-09-30
 
+- Add World thumbnail based on BBox
 - Support ESRI Image Service
 - Support ES modules
 
