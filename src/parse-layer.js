@@ -65,6 +65,7 @@ export default function parseLayer (url, json) {
   }
   minzoom = minzoom || 0
   maxzoom = maxzoom || 18
+  bbox = bbox || [-180, -85, 180, 85]
   return {
     title: title,
     identifier: identifier,

@@ -1,0 +1,236 @@
+{
+  "currentVersion": 10.41,
+  "serviceDescription": "<DIV STYLE=\"text-align:Left;\"><DIV><DIV><P><SPAN>This image service contains the National Land Cover Database (NLCD) 2001 land cover classification rasters of the conterminous U.S.. The NLCD 2001 land cover dataset was produced through a cooperative project conducted by the Multi-Resolution Land Characteristics (MRLC) Consortium. The MRLC Consortium is a partnership of federal agencies, consisting of the U.S. Geological Survey (USGS), the National Oceanic and Atmospheric Administration (NOAA), the U.S. Environmental Protection Agency (EPA), the U.S. Department of Agriculture (USDA), the U.S. Forest Service (USFS), the National Park Service (NPS), the U.S. Fish and Wildlife Service (FWS), the Bureau of Land Management (BLM) and the USDA Natural Resources Conservation Service (NRCS). To get more details about the NLCD program and downloadable data, please visit http://www.mrlc.gov. This data is managed using a mosaic dataset. Esri reserves the right to change or remove this service at any time and without notice.<\/SPAN><\/P><\/DIV><\/DIV><\/DIV>",
+  "name": "NLCDLandCover2001",
+  "description": "<DIV STYLE=\"text-align:Left;\"><DIV><DIV><P><SPAN>This image service contains the National Land Cover Database (NLCD) 2001 land cover classification rasters of the conterminous U.S.. The NLCD 2001 land cover dataset was produced through a cooperative project conducted by the Multi-Resolution Land Characteristics (MRLC) Consortium. The MRLC Consortium is a partnership of federal agencies, consisting of the U.S. Geological Survey (USGS), the National Oceanic and Atmospheric Administration (NOAA), the U.S. Environmental Protection Agency (EPA), the U.S. Department of Agriculture (USDA), the U.S. Forest Service (USFS), the National Park Service (NPS), the U.S. Fish and Wildlife Service (FWS), the Bureau of Land Management (BLM) and the USDA Natural Resources Conservation Service (NRCS). To get more details about the NLCD program and downloadable data, please visit http://www.mrlc.gov. This data is managed using a mosaic dataset. Esri reserves the right to change or remove this service at any time and without notice.<\/SPAN><\/P><\/DIV><\/DIV><\/DIV>",
+  "extent": {
+   "xmin": -2364615,
+   "ymin": 256035,
+   "xmax": 2266845,
+   "ymax": 3180435,
+   "spatialReference": {
+    "wkid": 5070,
+    "latestWkid": 5070
+   }
+  },
+  "initialExtent": {
+   "xmin": -2364615,
+   "ymin": 256035,
+   "xmax": 2266845,
+   "ymax": 3180435,
+   "spatialReference": {
+    "wkid": 5070,
+    "latestWkid": 5070
+   }
+  },
+  "fullExtent": {
+   "xmin": -2364615,
+   "ymin": 256035,
+   "xmax": 2266845,
+   "ymax": 3180435,
+   "spatialReference": {
+    "wkid": 5070,
+    "latestWkid": 5070
+   }
+  },
+  "pixelSizeX": 30,
+  "pixelSizeY": 30,
+  "bandCount": 1,
+  "pixelType": "U8",
+  "minPixelSize": 0,
+  "maxPixelSize": 0,
+  "copyrightText": "USGS, NOAA, EPA, USDA, USFS, NPS, FWS, BLM, NRCS, Esri",
+  "serviceDataType": "esriImageServiceDataTypeThematic",
+  "minValues": [],
+  "maxValues": [],
+  "meanValues": [],
+  "stdvValues": [],
+  "objectIdField": "OBJECTID",
+  "fields": [
+   {
+    "name": "OBJECTID",
+    "type": "esriFieldTypeOID",
+    "alias": "OBJECTID",
+    "domain": null
+   },
+   {
+    "name": "Shape",
+    "type": "esriFieldTypeGeometry",
+    "alias": "Shape",
+    "domain": null
+   },
+   {
+    "name": "Name",
+    "type": "esriFieldTypeString",
+    "alias": "Name",
+    "domain": null,
+    "length": 50
+   },
+   {
+    "name": "MinPS",
+    "type": "esriFieldTypeDouble",
+    "alias": "MinPS",
+    "domain": null
+   },
+   {
+    "name": "MaxPS",
+    "type": "esriFieldTypeDouble",
+    "alias": "MaxPS",
+    "domain": null
+   },
+   {
+    "name": "LowPS",
+    "type": "esriFieldTypeDouble",
+    "alias": "LowPS",
+    "domain": null
+   },
+   {
+    "name": "HighPS",
+    "type": "esriFieldTypeDouble",
+    "alias": "HighPS",
+    "domain": null
+   },
+   {
+    "name": "Category",
+    "type": "esriFieldTypeInteger",
+    "alias": "Category",
+    "domain": {
+     "type": "codedValue",
+     "name": "MosaicCatalogItemCategoryDomain",
+     "codedValues": [
+      {
+       "name": "Unknown",
+       "code": 0
+      },
+      {
+       "name": "Primary",
+       "code": 1
+      },
+      {
+       "name": "Overview",
+       "code": 2
+      },
+      {
+       "name": "Unprocessed Overview",
+       "code": 3
+      },
+      {
+       "name": "Partial Overview",
+       "code": 4
+      },
+      {
+       "name": "Uploaded",
+       "code": 253
+      },
+      {
+       "name": "Incomplete",
+       "code": 254
+      },
+      {
+       "name": "Custom",
+       "code": 255
+      }
+     ]
+    }
+   },
+   {
+    "name": "Tag",
+    "type": "esriFieldTypeString",
+    "alias": "Tag",
+    "domain": null,
+    "length": 20
+   },
+   {
+    "name": "GroupName",
+    "type": "esriFieldTypeString",
+    "alias": "GroupName",
+    "domain": null,
+    "length": 50
+   },
+   {
+    "name": "ProductName",
+    "type": "esriFieldTypeString",
+    "alias": "ProductName",
+    "domain": null,
+    "length": 50
+   },
+   {
+    "name": "CenterX",
+    "type": "esriFieldTypeDouble",
+    "alias": "CenterX",
+    "domain": null
+   },
+   {
+    "name": "CenterY",
+    "type": "esriFieldTypeDouble",
+    "alias": "CenterY",
+    "domain": null
+   },
+   {
+    "name": "ZOrder",
+    "type": "esriFieldTypeInteger",
+    "alias": "ZOrder",
+    "domain": null
+   },
+   {
+    "name": "Shape_Length",
+    "type": "esriFieldTypeDouble",
+    "alias": "Shape_Length",
+    "domain": null
+   },
+   {
+    "name": "Shape_Area",
+    "type": "esriFieldTypeDouble",
+    "alias": "Shape_Area",
+    "domain": null
+   }
+  ],
+  "capabilities": "Image,Metadata,Catalog,Mensuration",
+  "defaultMosaicMethod": "Northwest",
+  "allowedMosaicMethods": "NorthWest,Center,LockRaster,ByAttribute,None",
+  "sortField": "",
+  "sortValue": null,
+  "mosaicOperator": "First",
+  "defaultCompressionQuality": 75,
+  "defaultResamplingMethod": "Nearest",
+  "maxImageHeight": 4100,
+  "maxImageWidth": 15000,
+  "maxRecordCount": 1000,
+  "maxDownloadImageCount": 0,
+  "maxDownloadSizeLimit": 0,
+  "maxMosaicImageCount": 20,
+  "allowRasterFunction": true,
+  "rasterFunctionInfos": [],
+  "rasterTypeInfos": [
+   {
+    "name": "Raster Dataset",
+    "description": "Supports all ArcGIS Raster Datasets",
+    "help": ""
+   }
+  ],
+  "mensurationCapabilities": "Basic",
+  "hasHistograms": false,
+  "hasColormap": false,
+  "hasRasterAttributeTable": true,
+  "minScale": 0,
+  "maxScale": 0,
+  "exportTilesAllowed": false,
+  "hasMultidimensions": false,
+  "supportsStatistics": true,
+  "supportsAdvancedQueries": true,
+  "editFieldsInfo": null,
+  "ownershipBasedAccessControlForRasters": null,
+  "allowComputeTiePoints": false,
+  "useStandardizedQueries": true,
+  "advancedQueryCapabilities": {
+   "useStandardizedQueries": true,
+   "supportsStatistics": true,
+   "supportsOrderBy": true,
+   "supportsDistinct": true,
+   "supportsPagination": true
+  },
+  "spatialReference": {
+   "wkid": 5070,
+   "latestWkid": 5070
+  }
+ }

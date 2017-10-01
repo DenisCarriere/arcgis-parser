@@ -2,6 +2,7 @@
 
 ## 2.0.0 - 2017-09-30
 
+- Support multiple projections for world thumbnail
 - Add World thumbnail based on BBox
 - Support ESRI Image Service
 - Support ES modules

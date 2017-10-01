@@ -1,0 +1,32 @@
+{
+	"service": {
+		"type": null,
+		"version": 10.41,
+		"title": null
+	},
+	"layer": {
+		"title": null,
+		"identifier": "NLCDLandCover2001",
+		"author": null,
+		"abstract": "<DIV STYLE=\"text-align:Left;\"><DIV><DIV><P><SPAN>This image service contains the National Land Cover Database (NLCD) 2001 land cover classification rasters of the conterminous U.S.. The NLCD 2001 land cover dataset was produced through a cooperative project conducted by the Multi-Resolution Land Characteristics (MRLC) Consortium. The MRLC Consortium is a partnership of federal agencies, consisting of the U.S. Geological Survey (USGS), the National Oceanic and Atmospheric Administration (NOAA), the U.S. Environmental Protection Agency (EPA), the U.S. Department of Agriculture (USDA), the U.S. Forest Service (USFS), the National Park Service (NPS), the U.S. Fish and Wildlife Service (FWS), the Bureau of Land Management (BLM) and the USDA Natural Resources Conservation Service (NRCS). To get more details about the NLCD program and downloadable data, please visit http://www.mrlc.gov. This data is managed using a mosaic dataset. Esri reserves the right to change or remove this service at any time and without notice.</SPAN></P></DIV></DIV></DIV>",
+		"attribution": "USGS, NOAA, EPA, USDA, USFS, NPS, FWS, BLM, NRCS, Esri",
+		"category": null,
+		"keywords": null,
+		"format": "jpg",
+		"formats": "",
+		"minzoom": 0,
+		"maxzoom": 18,
+		"bbox": [
+			-180,
+			-85,
+			180,
+			85
+		]
+	},
+	"url": {
+		"getCapabilities": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/NLCDLandCover2001/ImageServer?f=pjson",
+		"slippy": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/NLCDLandCover2001/ImageServer/exportImage?bbox={bbox4326}&bboxSR=4326&imageSR=3857&size=256,256&format=jpg&transparent=true&noData=0&f=image",
+		"world": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/NLCDLandCover2001/ImageServer/exportImage?bbox=-180,-85,180,85&bboxSR=4326&imageSR=3857&size=256,256&format=jpg&transparent=true&noData=0&f=image",
+		"host": "sampleserver6.arcgisonline.com"
+	}
+}
