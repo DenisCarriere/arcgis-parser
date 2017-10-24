@@ -13,9 +13,10 @@
     "src"
   ],
   "scripts": {
-    "pretest": "rollup -c rollup.config.js && echo 'module.exports.default = arcgisParser;' >> main.js",
+    "prepublish": "rollup -c rollup.config.js && echo 'module.exports.default = arcgisParser;' >> main.js",
+    "pretest": "standard src/**.js && npm run prepublish",
     "test": "node -r @std/esm test.js",
-    "posttest": "standard src/**.js"
+    "posttest": "tsc types.ts && node types.js"
   },
   "author": "Denis Carriere <@DenisCarriere>",
   "license": "MIT",

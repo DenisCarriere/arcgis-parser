@@ -1,10 +1,10 @@
-import * as arcgisParser from './'
+import arcgisParser from './'
 
 async function main() {
-  arcgisParser('https://services.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map/MapServer')
-
-  // Metadata
-  const metadata = await arcgisParser({service: 'NatGeo_World_Map'})
+  const url = 'https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer?f=pjson'
+  const response = await fetch(url)
+  const json = await response.json()
+  const metadata = arcgisParser(url, json)
 
   // Metadata.Url
   metadata.url.slippy
