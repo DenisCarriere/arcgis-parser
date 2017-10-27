@@ -1,0 +1,296 @@
+{
+  "currentVersion": 10.41,
+  "serviceDescription": "<DIV STYLE=\"text-align:Left;\"><DIV><DIV><P><SPAN>This image service contains 9 LAS files covering North Carolina\u2019s, City of Charlotte downtown area. The lidar data was collected in 2007. First return points are used to generate an on-the-fly seamless elevation surface with a 10-foot pixel resolution. The elevation unit is foot. LAS files were provided by Mecklenburg County, NC and are managed using a mosaic dataset. Esri reserves the right to change or remove this service at any time and without notice.<\/SPAN><\/P><\/DIV><\/DIV><\/DIV>",
+  "name": "CharlotteLAS",
+  "description": "<DIV STYLE=\"text-align:Left;\"><DIV><DIV><P><SPAN>This image service contains 9 LAS files covering North Carolina\u2019s, City of Charlotte downtown area. The lidar data was collected in 2007. First return points are used to generate an on-the-fly seamless elevation surface with a 10-foot pixel resolution. The elevation unit is foot. LAS files were provided by Mecklenburg County, NC and are managed using a mosaic dataset. Esri reserves the right to change or remove this service at any time and without notice.<\/SPAN><\/P><\/DIV><\/DIV><\/DIV>",
+  "extent": {
+   "xmin": 1440000,
+   "ymin": 535000,
+   "xmax": 1455000,
+   "ymax": 550000,
+   "spatialReference": {
+    "wkid": 102719,
+    "latestWkid": 2264
+   }
+  },
+  "initialExtent": {
+   "xmin": 1440000,
+   "ymin": 535000,
+   "xmax": 1455000,
+   "ymax": 550000,
+   "spatialReference": {
+    "wkid": 102719,
+    "latestWkid": 2264
+   }
+  },
+  "fullExtent": {
+   "xmin": 1440000,
+   "ymin": 535000,
+   "xmax": 1455000,
+   "ymax": 550000,
+   "spatialReference": {
+    "wkid": 102719,
+    "latestWkid": 2264
+   }
+  },
+  "pixelSizeX": 10,
+  "pixelSizeY": 10,
+  "bandCount": 1,
+  "pixelType": "F32",
+  "minPixelSize": 0,
+  "maxPixelSize": 0,
+  "copyrightText": "Copyright © 2007 Mecklenburg County",
+  "serviceDataType": "esriImageServiceDataTypeElevation",
+  "minValues": [
+   515.6699829101562
+  ],
+  "maxValues": [
+   1611.125
+  ],
+  "meanValues": [
+   712.371337411377
+  ],
+  "stdvValues": [
+   45.56883666949917
+  ],
+  "objectIdField": "OBJECTID",
+  "fields": [
+   {
+    "name": "OBJECTID",
+    "type": "esriFieldTypeOID",
+    "alias": "OBJECTID",
+    "domain": null
+   },
+   {
+    "name": "Shape",
+    "type": "esriFieldTypeGeometry",
+    "alias": "Shape",
+    "domain": null
+   },
+   {
+    "name": "Name",
+    "type": "esriFieldTypeString",
+    "alias": "Name",
+    "domain": null,
+    "length": 50
+   },
+   {
+    "name": "MinPS",
+    "type": "esriFieldTypeDouble",
+    "alias": "MinPS",
+    "domain": null
+   },
+   {
+    "name": "MaxPS",
+    "type": "esriFieldTypeDouble",
+    "alias": "MaxPS",
+    "domain": null
+   },
+   {
+    "name": "LowPS",
+    "type": "esriFieldTypeDouble",
+    "alias": "LowPS",
+    "domain": null
+   },
+   {
+    "name": "HighPS",
+    "type": "esriFieldTypeDouble",
+    "alias": "HighPS",
+    "domain": null
+   },
+   {
+    "name": "Category",
+    "type": "esriFieldTypeInteger",
+    "alias": "Category",
+    "domain": {
+     "type": "codedValue",
+     "name": "MosaicCatalogItemCategoryDomain",
+     "codedValues": [
+      {
+       "name": "Unknown",
+       "code": 0
+      },
+      {
+       "name": "Primary",
+       "code": 1
+      },
+      {
+       "name": "Overview",
+       "code": 2
+      },
+      {
+       "name": "Unprocessed Overview",
+       "code": 3
+      },
+      {
+       "name": "Partial Overview",
+       "code": 4
+      },
+      {
+       "name": "Uploaded",
+       "code": 253
+      },
+      {
+       "name": "Incomplete",
+       "code": 254
+      },
+      {
+       "name": "Custom",
+       "code": 255
+      }
+     ]
+    }
+   },
+   {
+    "name": "Tag",
+    "type": "esriFieldTypeString",
+    "alias": "Tag",
+    "domain": null,
+    "length": 20
+   },
+   {
+    "name": "GroupName",
+    "type": "esriFieldTypeString",
+    "alias": "GroupName",
+    "domain": null,
+    "length": 50
+   },
+   {
+    "name": "ProductName",
+    "type": "esriFieldTypeString",
+    "alias": "ProductName",
+    "domain": null,
+    "length": 50
+   },
+   {
+    "name": "CenterX",
+    "type": "esriFieldTypeDouble",
+    "alias": "CenterX",
+    "domain": null
+   },
+   {
+    "name": "CenterY",
+    "type": "esriFieldTypeDouble",
+    "alias": "CenterY",
+    "domain": null
+   },
+   {
+    "name": "ZOrder",
+    "type": "esriFieldTypeInteger",
+    "alias": "ZOrder",
+    "domain": null
+   },
+   {
+    "name": "Shape_Length",
+    "type": "esriFieldTypeDouble",
+    "alias": "Shape_Length",
+    "domain": null
+   },
+   {
+    "name": "Shape_Area",
+    "type": "esriFieldTypeDouble",
+    "alias": "Shape_Area",
+    "domain": null
+   },
+   {
+    "name": "Version",
+    "type": "esriFieldTypeString",
+    "alias": "Version",
+    "domain": null,
+    "length": 20
+   },
+   {
+    "name": "PointCount",
+    "type": "esriFieldTypeDouble",
+    "alias": "Point Count",
+    "domain": null
+   },
+   {
+    "name": "PointSpacing",
+    "type": "esriFieldTypeDouble",
+    "alias": "Point Spacing",
+    "domain": null
+   },
+   {
+    "name": "ZMin",
+    "type": "esriFieldTypeDouble",
+    "alias": "ZMin",
+    "domain": null
+   },
+   {
+    "name": "ZMax",
+    "type": "esriFieldTypeDouble",
+    "alias": "ZMax",
+    "domain": null
+   }
+  ],
+  "capabilities": "Image,Metadata,Catalog,Mensuration",
+  "defaultMosaicMethod": "Northwest",
+  "allowedMosaicMethods": "NorthWest,Center,LockRaster,ByAttribute,Nadir,Viewpoint,Seamline,None",
+  "sortField": "",
+  "sortValue": null,
+  "mosaicOperator": "First",
+  "defaultCompressionQuality": 75,
+  "defaultResamplingMethod": "Bilinear",
+  "maxImageHeight": 4100,
+  "maxImageWidth": 15000,
+  "maxRecordCount": 1000,
+  "maxDownloadImageCount": 0,
+  "maxDownloadSizeLimit": 0,
+  "maxMosaicImageCount": 20,
+  "allowRasterFunction": true,
+  "rasterFunctionInfos": [
+   {
+    "name": "None",
+    "description": "A No-Op Function.",
+    "help": ""
+   },
+   {
+    "name": "RFTAspectColor",
+    "description": "This function generates a color representation of aspect (the slope direction) generated from the elevation surface: from red (Northeast) clockwise to blue (Northwest).",
+    "help": "This raster function template contains the following processing: aspect, remap, colormap and colormap to RGB functions. The remap fuction remaps aspect result evenly to 8 directions, (N,NE,E,SE,S,SW,W,NW). The colormap function used the following colormap for the 8 categories:  [[0 176 176 176], [1 255 0 0],[2 255 166 0],[3 255 255 0],[4 0 255 0],[5 0 255 255],[6 0 166 255],[7 0 0 255],[8 255 0 255]]. To overwrite the default setting, use InputRanges (double array), NoDataRanges (double array), and OutputValues (int array) for remapping, and use Colormap to change colors."
+   },
+   {
+    "name": "RFTHillshade",
+    "description": "This function creates a hillshade effect based on the elevation data source.",
+    "help": ""
+   },
+   {
+    "name": "RFTShadedReliefElevationColorRamp",
+    "description": "This function processes the elevation surface as shaded relief. ",
+    "help": "This raster function template uses a shaded relief function. The default values of ZFactor is 1, Altitude is 45, and Azimuth is 315. An elevation colorramp is used."
+   }
+  ],
+  "rasterTypeInfos": [
+   {
+    "name": "Raster Dataset",
+    "description": "Supports all ArcGIS Raster Datasets",
+    "help": ""
+   }
+  ],
+  "mensurationCapabilities": "Basic",
+  "hasHistograms": true,
+  "hasColormap": false,
+  "hasRasterAttributeTable": false,
+  "minScale": 0,
+  "maxScale": 0,
+  "exportTilesAllowed": false,
+  "hasMultidimensions": false,
+  "supportsStatistics": true,
+  "supportsAdvancedQueries": true,
+  "editFieldsInfo": null,
+  "ownershipBasedAccessControlForRasters": null,
+  "allowComputeTiePoints": false,
+  "useStandardizedQueries": true,
+  "advancedQueryCapabilities": {
+   "useStandardizedQueries": true,
+   "supportsStatistics": true,
+   "supportsOrderBy": true,
+   "supportsDistinct": true,
+   "supportsPagination": true
+  },
+  "spatialReference": {
+   "wkid": 102719,
+   "latestWkid": 2264
+  }
+ }

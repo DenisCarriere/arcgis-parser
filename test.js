@@ -17,7 +17,8 @@ const urls = {
   'World_Imagery': 'https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer',
   'World_Street_Map': 'https://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer',
   'World_Topo_Map': 'https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer',
-  'WorldTimeZones': 'https://sampleserver6.arcgisonline.com/arcgis/rest/services/WorldTimeZones/MapServer'
+  'WorldTimeZones': 'https://sampleserver6.arcgisonline.com/arcgis/rest/services/WorldTimeZones/MapServer',
+  'CharlotteLAS': 'https://sampleserver6.arcgisonline.com/arcgis/rest/services/CharlotteLAS/ImageServer'
 }
 
 const out = (filename) => path.join(__dirname, 'test', 'out', filename)

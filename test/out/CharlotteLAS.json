@@ -1,0 +1,32 @@
+{
+	"service": {
+		"type": null,
+		"version": 10.41,
+		"title": null
+	},
+	"layer": {
+		"title": null,
+		"identifier": "CharlotteLAS",
+		"author": null,
+		"abstract": "<DIV STYLE=\"text-align:Left;\"><DIV><DIV><P><SPAN>This image service contains 9 LAS files covering North Carolina’s, City of Charlotte downtown area. The lidar data was collected in 2007. First return points are used to generate an on-the-fly seamless elevation surface with a 10-foot pixel resolution. The elevation unit is foot. LAS files were provided by Mecklenburg County, NC and are managed using a mosaic dataset. Esri reserves the right to change or remove this service at any time and without notice.</SPAN></P></DIV></DIV></DIV>",
+		"attribution": "Copyright © 2007 Mecklenburg County",
+		"category": null,
+		"keywords": null,
+		"format": "jpg",
+		"formats": "",
+		"minzoom": 0,
+		"maxzoom": 18,
+		"bbox": [
+			-180,
+			-85,
+			180,
+			85
+		]
+	},
+	"url": {
+		"getCapabilities": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/CharlotteLAS/ImageServer?f=pjson",
+		"slippy": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/CharlotteLAS/ImageServer/exportImage?bbox={bbox4326}&bboxSR=4326&imageSR=3857&size=256,256&format=jpg&transparent=false&f=image",
+		"world": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/CharlotteLAS/ImageServer/exportImage?bbox=-179,-84,179,84&bboxSR=4326&imageSR=3857&size=256,256&format=jpg&transparent=false&f=image",
+		"host": "sampleserver6.arcgisonline.com"
+	}
+}
