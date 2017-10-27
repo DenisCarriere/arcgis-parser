@@ -1,5 +1,5 @@
-import { metersToLngLat } from 'global-mercator'
 import { mapZoom } from './utils'
+import proj4 from 'proj4'
 
 /**
  * @typedef {Object} Layer
@@ -44,17 +44,24 @@ export default function parseLayer (url, json) {
     const south = json.fullExtent.ymin
     const east = json.fullExtent.xmax
     const north = json.fullExtent.ymax
-    switch (json.fullExtent.spatialReference.latestWkid) {
-      case 3857:
-        const westsouth = metersToLngLat([west, south])
-        const eastnorth = metersToLngLat([east, north])
-        bbox = [westsouth[0], westsouth[1], eastnorth[0], eastnorth[1]]
-        break
+    const wkid = json.fullExtent.spatialReference.latestWkid
+
+    switch (wkid) {
       case 4326:
         bbox = [west, south, east, north]
         break
       default:
-        bbox = null
+        let proj
+        try {
+          proj = proj4('EPSG:' + wkid)
+        } catch (e) {
+          proj = null
+        }
+        if (proj) {
+          const westsouth = proj.inverse([west, south])
+          const eastnorth = proj.inverse([east, north])
+          bbox = [westsouth[0], westsouth[1], eastnorth[0], eastnorth[1]]
+        } else bbox = null
     }
   }
   var minzoom

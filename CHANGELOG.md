@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.0 - 2017-10-27
+
+- Improve ArcGIS REST thumbnail handling
+- Handle UTM projections using Proj4
+
 ## 2.0.0 - 2017-09-30
 
 - Support multiple projections for world thumbnail

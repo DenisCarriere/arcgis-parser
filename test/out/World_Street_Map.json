@@ -17,16 +17,16 @@
 		"minzoom": 0,
 		"maxzoom": 23,
 		"bbox": [
-			-179.999989,
-			-85,
-			179.999989,
-			85
+			-179.99998854084413,
+			-85.00000000000003,
+			179.99998854084413,
+			84.99999999999996
 		]
 	},
 	"url": {
 		"getCapabilities": "https://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer?f=pjson",
-		"slippy": "https://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer/export?bbox={bbox4326}&bboxSR=4326&imageSR=3857&size=256,256&format=png&transparent=true&noData=0&f=image",
-		"world": "https://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer/export?bbox=-179.999989,-85,179.999989,85&bboxSR=4326&imageSR=3857&size=256,256&format=png&transparent=true&noData=0&f=image",
+		"slippy": "https://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer/export?bbox={bbox4326}&bboxSR=4326&imageSR=3857&size=256,256&format=png&transparent=false&f=image",
+		"world": "https://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer/export?bbox=-179,-84,179,84&bboxSR=4326&imageSR=3857&size=256,256&format=png&transparent=false&f=image",
 		"host": "services.arcgisonline.com"
 	}
 }

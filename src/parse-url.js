@@ -31,8 +31,7 @@ export default function parseUrl (url, json) {
       imageSR: '3857',
       size: '256,256',
       format: format,
-      transparent: 'true',
-      noData: 0,
+      transparent: 'false',
       f: 'image'
     }
     parse.path = null
@@ -50,8 +49,7 @@ export default function parseUrl (url, json) {
       imageSR: '3857',
       size: '256,256',
       format: format,
-      transparent: 'true',
-      noData: 0,
+      transparent: 'false',
       f: 'image'
     }
     parse.path = null
@@ -61,9 +59,12 @@ export default function parseUrl (url, json) {
   var world = null
   if (slippy) {
     let bbox = parseLayer(url, json).bbox
-    // EPSG:3857 doesn't support latitudes higher than 85 degrees
-    if (bbox[1] < -85) bbox[1] = -85
-    if (bbox[3] > 85) bbox[3] = 85
+    // EPSG:3857 doesn't support latitudes higher than 84 degrees
+    if (bbox[0] < -179) bbox[0] = -179
+    if (bbox[1] < -84) bbox[1] = -84
+    if (bbox[2] > 179) bbox[2] = 179
+    if (bbox[3] > 84) bbox[3] = 84
+
     world = slippy.replace(/{bbox4326}/, bbox.join(','))
   }
   return {

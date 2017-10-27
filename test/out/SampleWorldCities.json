@@ -25,8 +25,8 @@
 	},
 	"url": {
 		"getCapabilities": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer?f=pjson",
-		"slippy": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer/export?bbox={bbox4326}&bboxSR=4326&imageSR=3857&size=256,256&format=png&transparent=true&noData=0&f=image",
-		"world": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer/export?bbox=-180,-85,180.0001220703125,85&bboxSR=4326&imageSR=3857&size=256,256&format=png&transparent=true&noData=0&f=image",
+		"slippy": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer/export?bbox={bbox4326}&bboxSR=4326&imageSR=3857&size=256,256&format=png&transparent=false&f=image",
+		"world": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer/export?bbox=-179,-84,179,84&bboxSR=4326&imageSR=3857&size=256,256&format=png&transparent=false&f=image",
 		"host": "sampleserver6.arcgisonline.com"
 	}
 }

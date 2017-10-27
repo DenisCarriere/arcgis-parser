@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "global-mercator": "*",
+    "proj4": "^2.4.4",
     "slippy-tile": "*"
   },
   "@std/esm": {
